@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Service Center</title>
+<style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    body {
+        background: linear-gradient(135deg, rgba(0, 150, 255, 0.8), rgba(0, 0, 0, 0.7));
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+    }
+
+    header h1 { font-size: 22px; }
+    nav ul { display: flex; list-style: none; }
+    nav ul li { margin-left: 20px; }
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+    nav ul li a:hover { color: #00ffcc; }
+
+    .section {
+        display: none;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    .section.active { display: block; }
+
+    /* Home Section */
+    .home h2 { font-size: 36px; margin-bottom: 10px; }
+    .home p { font-size: 18px; margin-bottom: 20px; }
+
+    /* Logo Carousel */
+    .logo-carousel {
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-top: 30px;
+    }
+    .logo-carousel img {
+        height: 60px;
+        margin: 0 20px;
+        animation: scroll 20s linear infinite;
+    }
+    @keyframes scroll {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    footer {
+        background: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        padding: 10px;
+        margin-top: auto;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Customer Service Center</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('services')">Services</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Home Section -->
+<div id="home" class="section active home">
+    <h2>Welcome to Customer Care</h2>
+    <p>Your trusted partner for all service needs.</p>
+    <div class="logo-carousel">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/LG_logo_%282015%29.svg" alt="LG">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Daikin_logo.svg" alt="Daikin">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Panasonic_logo.svg" alt="Panasonic">
+    </div>
+</div>
+
+<!-- Services Section -->
+<div id="services" class="section">
+    <h2>Our Services</h2>
+    <p>We provide repair and maintenance for all major brands including LG, Samsung, Daikin, Panasonic, and more.</p>
+</div>
+
+<!-- Contact Section -->
+<div id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: support@customerservice.com | Phone: +91 98765 43210</p>
+</div>
+
+<footer>
+    © 2025 Customer Service Center. All rights reserved.
+</footer>
+
+<script>
+    function showSection(id) {
+        document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
