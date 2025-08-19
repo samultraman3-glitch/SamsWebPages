@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Appliance Customer Service</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #0f172a;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #2563eb, #1e3a8a);
+      color: white;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .hero button {
+      padding: 0.75rem 1.5rem;
+      background: #fff;
+      color: #1e3a8a;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 1.5rem;
+    }
+    .hero button:hover {
+      background: #f1f5f9;
+    }
+    .banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .banner img {
+      width: 150px;
+      height: auto;
+      border-radius: 12px;
+      background: #fff;
+      padding: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .banner img:hover {
+      transform: scale(1.05);
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 2rem;
+    }
+    .card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card i {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2563eb;
+    }
+    .contact {
+      background: #f1f5f9;
+      padding: 3rem 2rem;
+    }
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .contact form input, .contact form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .contact form button {
+      background: #2563eb;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .contact form button:hover {
+      background: #1e3a8a;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #0f172a;
+      color: white;
+      margin-top: 2rem;
+    }
+    footer .social i {
+      margin: 0 0.5rem;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    footer .social i:hover {
+      color: #2563eb;
+    }
+    /* Floating Call Now Button */
+    .call-now {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 0.9rem 1.2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s;
+      z-index: 1000;
+    }
+    .call-now:hover {
+      background: #1ebe5c;
+    }
+    .call-now i {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sri Sai Service</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+  <h2>Expert Service at Your Doorstep Now @ Chennai</h2>
+  <div class="banner">
+<img src="images/AC.png" alt="Air Conditioner">
+    <img src="images/WM.png" alt="Washing Machine">
+    <img src="images/MV.png" alt="Microwave">
+    <img src="images/TV.png" alt="TV">
+  </div>
+  <button onclick="scrollToContact()">Book a Service</button>
+</section>
+
+  <section id="services" class="services">
+    <div class="card">
+      <i class="fas fa-wind"></i>
+      <h3>AC Repair</h3>
+      <p>Quick and reliable air conditioner servicing and repair.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-tint"></i>
+      <h3>Washing Machine</h3>
+      <p>Expert repair and installation for all washing machine models.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-ice-cream"></i>
+      <h3>Refrigerator</h3>
+      <p>Professional refrigerator repair and cooling solutions.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-burn"></i>
+      <h3>Microwave</h3>
+      <p>Fast microwave repair for heating and power issues.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 style="text-align:center; margin-bottom:1rem;">Book Your Service</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <textarea rows="5" placeholder="Describe your appliance issue" required></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ApplianceCare. All Rights Reserved.</p>
+    <div class="social">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </footer>
+
+  <!-- Floating Call Now Button -->
+  <a href="tel:+919999999999" class="call-now">
+    <i class="fas fa-phone-alt"></i> 1860-122-1234
+  </a>
+
+  <script>
+    function scrollToContact() {
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you for booking! Our team will contact you shortly.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
