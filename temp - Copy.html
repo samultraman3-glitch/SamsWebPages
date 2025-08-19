@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Customer Service Center</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: #f5f5f5;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: normal;
+      font-size: 1em;
+    }
+    nav a:hover {
+      color: #0073e6;
+    }
+    #logo-banner {
+      width: 100%;
+      background: #f9f9f9;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      box-sizing: border-box;
+      padding: 0 10px;
+    }
+    #logo-slider {
+      display: flex;
+      animation: slide 15s linear infinite;
+      gap: 40px;
+    }
+    #logo-slider img {
+      height: 80px;
+      object-fit: contain;
+      user-select: none;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    section h2 {
+      margin-bottom: 12px;
+      color: #222;
+    }
+    section p {
+      line-height: 1.6;
+      font-size: 1em;
+    }
+    #disclaimer {
+      background: #fbeee0;
+      padding: 30px 20px;
+      border-radius: 6px;
+      max-width: 900px;
+      margin: 20px auto 60px;
+    }
+    footer {
+      text-align: center;
+      padding: 16px;
+      background: #f5f5f5;
+      font-size: 0.9em;
+      color: #777;
+      user-select: none;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+      #logo-banner {
+        height: 120px;
+      }
+      #logo-slider img {
+        height: 50px;
+        margin: 0 10px;
+      }
+      section {
+        margin: 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>Call Us: +91-9876543210</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Contact Us</a>
+  </nav>
+</header>
+
+<div id="logo-banner" aria-label="Moving logos of top AC brands in India">
+  <div id="logo-slider" aria-hidden="true">
+    <img src="C:\Users\NitinRavi\Pictures\log\daikin.png" alt="Daikin logo" />
+    <img src="C:\Users\NitinRavi\Pictures\log\lg.png" alt="LG logo" />
+    <img src="C:\Users\NitinRavi\Pictures\log\voltas.png" alt="Voltas logo" />
+    <img src="C:\Users\NitinRavi\Pictures\log\hitachi.png" alt="Hitachi logo" />
+    <img src="C:\Users\NitinRavi\Pictures\log\carrier.png" alt="Carrier logo" />
+    <img src="C:\Users\NitinRavi\Pictures\log\bluestar.png" alt="Blue Star logo" />
+    <img src="C:\Users\NitinRavi\Pictures\log\panasonic.png" alt="Panasonic logo" />
+    <img src="C:\Users\NitinRavi\Pictures\log\samsung.png" alt="Samsung logo" />
+    <!-- Repeat logos for smooth continuous slide -->
+    <img src="C:\Users\NitinRavi\Pictures\log\daikin.png" alt="" />
+    <img src="C:\Users\NitinRavi\Pictures\log\lg.png" alt="" />
+    <img src="C:\Users\NitinRavi\Pictures\log\voltas.png" alt="" />
+    <img src="C:\Users\NitinRavi\Pictures\log\hitachi.png" alt="" />
+    <img src="C:\Users\NitinRavi\Pictures\log\carrier.png" alt="" />
+    <img src="C:\Users\NitinRavi\Pictures\log\bluestar.png" alt="" />
+    <img src="C:\Users\NitinRavi\Pictures\log\panasonic.png" alt="" />
+    <img src="C:\Users\NitinRavi\Pictures\log\samsung.png" alt="" />
+  </div>
+</div>
+
+<section>
+  <h2>About Our Service Center</h2>
+  <p>
+    Welcome to our dedicated customer care center, specializing in providing prompt and reliable assistance for all your air conditioner needs. We handle inquiries, troubleshooting, and support requests for a variety of AC brands, ensuring customer satisfaction with a professional approach.
+  </p>
+  
+
+</section>
+
+<section id="disclaimer">
+  <h2>Disclaimer</h2>
+  <p>
+    This is an independent customer care and service center. We are not affiliated with, endorsed by, or officially connected to any air conditioner brand listed. All product names, logos, and brands are property of their respective owners.
+  </p>
+</section>
+
+<footer>
+  &copy; 2025 Customer Service Center. All rights reserved.
+</footer>
+
+</body>
+</html>
